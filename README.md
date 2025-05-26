@@ -22,25 +22,38 @@ conda activate epenv/
 ```bash
 pip install -r requirements.txt
 ```
-Create a .env file in the root directory and add your Pinecone & openai credentials as follows:
+### Create a .env file in the root directory and add your Pinecone & openai credentials as follows:
+```bash
 PINECONE_API_KEY = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
 OPENAI_API_KEY = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+```
+
+```bash
 # run the following command to store embeddings to pinecone
 python store_index.py
+```
+
+```bash
 # Finally run the following command
 python app.py
+```
+
 Now,
 
-open up localhost:
-Techstack Used:
+open up localhost:8080 and chat with the chatbot which will make you feel better!
+
+### Techstack Used:
 Python
 LangChain
 Flask
 GPT
 Pinecone
-AWS-CICD-Deployment-with-Github-Actions
-1. Login to AWS console.
-2. Create IAM user for deployment
+
+## AWS-CICD-Deployment-with-Github-Actions
+### 1. Login to AWS console.
+### 2. Create IAM user for deployment
+
+```bash
 #with specific access
 
 1. EC2 access : It is virtual machine
@@ -65,10 +78,17 @@ AWS-CICD-Deployment-with-Github-Actions
 1. AmazonEC2ContainerRegistryFullAccess
 
 2. AmazonEC2FullAccess
-3. Create ECR repo to store/save docker image
+
+```
+
+### 3. Create ECR repo to store/save docker image
+```bash
 - Save the URI: 970547337635.dkr.ecr.ap-south-1.amazonaws.com/medicalchatbot
-4. Create EC2 machine (Ubuntu)
-5. Open EC2 and Install docker in EC2 Machine:
+```
+
+### 4. Create EC2 machine (Ubuntu)
+### 5. Open EC2 and Install docker in EC2 Machine:
+```bash
 #optinal
 
 sudo apt-get update -y
@@ -84,9 +104,14 @@ sudo sh get-docker.sh
 sudo usermod -aG docker ubuntu
 
 newgrp docker
-6. Configure EC2 as self-hosted runner:
+```
+
+### 6. Configure EC2 as self-hosted runner:
+```bash
 setting>actions>runner>new self hosted runner> choose os> then run command one by one
-7. Setup github secrets:
+```
+
+### 7. Setup github secrets:
 AWS_ACCESS_KEY_ID
 AWS_SECRET_ACCESS_KEY
 AWS_DEFAULT_REGION
