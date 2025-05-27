@@ -43,11 +43,11 @@ Now,
 open up localhost:8080 and chat with the chatbot which will make you feel better!
 
 ### Techstack Used:
-Python
-LangChain
-Flask
-GPT
-Pinecone
+- Python
+- LangChain
+- Flask
+- OpenAI
+- Pinecone
 
 ## AWS-CICD-Deployment-with-Github-Actions
 ### 1. Login to AWS console.
@@ -112,9 +112,9 @@ setting>actions>runner>new self hosted runner> choose os> then run command one b
 ```
 
 ### 7. Setup github secrets:
-AWS_ACCESS_KEY_ID
-AWS_SECRET_ACCESS_KEY
-AWS_DEFAULT_REGION
-ECR_REPO
-PINECONE_API_KEY
-OPENAI_API_KEY
+- AWS_ACCESS_KEY_ID
+- AWS_SECRET_ACCESS_KEY
+- AWS_DEFAULT_REGION
+- ECR_REPO
+- PINECONE_API_KEY
+- OPENAI_API_KEY
